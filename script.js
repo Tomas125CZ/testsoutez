@@ -1,6 +1,7 @@
+var questions = 5;
+
 document.getElementById('checkAnswers').addEventListener('click', function() {
     // Zde můžete prověřit odpovědi a nastavit zobrazení kódu "giftcrafd" podle vaší logiky
-    var questions = 5;
     var right = true;
     for(var x = 1; x <= questions; x++) {
         if(document.querySelector('input[name="answer' + x + '"]:checked') == null) {
@@ -20,6 +21,32 @@ document.getElementById('checkAnswers').addEventListener('click', function() {
         alert('Odpovědi nejsou správné.');
     }
 });
+
+document.getElementById("getCode").addEventListener('click', function() {
+    var code = "";
+    for(var x = 1; x <= questions; x++) {
+        if(document.querySelector('input[name="answer' + x + '"]:checked') == null) {
+            alert('Odpověz na všechny otázky!')
+            return;
+        }
+        if(document.getElementById("answer" + x + "A").checked) code += "1";
+        else if(document.getElementById("answer" + x + "B").checked) code += "2";
+        else if(document.getElementById("answer" + x + "C").checked) code += "3";
+        else if(document.getElementById("answer" + x + "D").checked) code += "4";
+    }
+    document.getElementById("idText").innerHTML = "Tvoje ID: " + code;
+})
+
+function checkID(writenID = "") {
+    for(var x = 1; x <= questions; x++) {
+        var text = "";
+        if(writenID.split("")[x-1] == "1") text = "A";
+        if(writenID.split("")[x-1] == "2") text = "B";
+        if(writenID.split("")[x-1] == "3") text = "C";
+        if(writenID.split("")[x-1] == "4") text = "D";
+        document.getElementById("answer" + x + text).checked = true;
+    }
+}
 
 document.getElementById("submitCode").addEventListener('click', function() {
     var validCode = "4G7T9K1Q6P";
