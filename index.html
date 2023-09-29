@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Soutěž</title>
+</head>
+<body>
+    <header>
+        <h1>Aktuální soutěž: <span id="soutezText">League of Legends 5€ (TEST PAGE)</span></h1>
+    </header>
+    <main>
+        <section id="codeSection">
+            <h2>Zadejte kód pro vyplnění 5 otázek:</h2>
+            <input type="text" id="codeInput">
+            <button id="submitCode">Odeslat kód</button>
+        </section>
+        <section class="question">
+            <h2>Otázka 1:</h2>
+            <p>Jak se jmenuji?</p>
+            <input type="radio" id="answer1A" name="answer1" value="false">
+            <label for="answer1A">Tomáš Novák</label>
+            <input type="radio" id="answer1B" name="answer1" value="false">
+            <label for="answer1B">Tomáš Král</label>
+            <input type="radio" id="answer1C" name="answer1" value="right">
+            <label for="answer1C">Tomáš Urban</label>
+            <input type="radio" id="answer1D" name="answer1" value="false">
+            <label for="answer1D">Tomáš Svoboda</label>
+        </section>
+        <section class="question">
+            <h2>Otázka 2:</h2>
+            <p>Datum narození?</p>
+            <input type="radio" id="answer2A" name="answer2" value="right">
+            <label for="answer2A">10.12.2006</label>
+            <input type="radio" id="answer2B" name="answer2" value="false">
+            <label for="answer2B">15.09.2007</label>
+            <input type="radio" id="answer2C" name="answer2" value="false">
+            <label for="answer2C">20.06.2006</label>
+            <input type="radio" id="answer2D" name="answer2" value="false">
+            <label for="answer2D">10.05.2005</label>
+        </section>
+        <section class="question">
+            <h2>Otázka 3:</h2>
+            <p>Jaký druh filmů preferuji?</p>
+            <input type="radio" id="answer3A" name="answer3" value="right">
+            <label for="answer3A">Komedie</label>
+            <input type="radio" id="answer3B" name="answer3" value="false">
+            <label for="answer3B">Sci-fi</label>
+            <input type="radio" id="answer3C" name="answer3" value="false">
+            <label for="answer3C">Drama</label>
+            <input type="radio" id="answer3D" name="answer3" value="false">
+            <label for="answer3D">Akce</label>
+        </section>
+        <section class="question">
+            <h2>Otázka 4:</h2>
+            <p>Jaký sport aktuálně dělám?</p>
+            <input type="radio" id="answer4A" name="answer4" value="false">
+            <label for="answer4A">Fotbal</label>
+            <input type="radio" id="answer4B" name="answer4" value="false">
+            <label for="answer4B">Hokej</label>
+            <input type="radio" id="answer4C" name="answer4" value="false">
+            <label for="answer4C">Tenis</label>
+            <input type="radio" id="answer4D" name="answer4" value="right">
+            <label for="answer4D">Požární sport</label>
+        </section>
+        <section class="question">
+            <h2>Otázka 5:</h2>
+            <p>Můj nejoblíbenější hudební žánr?</p>
+            <input type="radio" id="answer5A" name="answer5" value="false">
+            <label for="answer5A">Rock</label>
+            <input type="radio" id="answer5B" name="answer5" value="false">
+            <label for="answer5B">Pop</label>
+            <input type="radio" id="answer5C" name="answer5" value="false">
+            <label for="answer5C">Hip-hop</label>
+            <input type="radio" id="answer5D" name="answer5" value="right">
+            <label for="answer5D">Rap</label>
+        </section>
+    </main>
+    <footer>
+        <button id="checkAnswers">Zkontrolovat odpovědi</button>
+    </footer>
+    <div id="giftcode" style="display: none;">
+        <p>Vyhráli jste! <span id="giftcodeText">XXXXXXXX</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
